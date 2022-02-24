@@ -1,0 +1,25 @@
+<br/>
+<h2 style="text-align: center; font-family: 'Montserrat', sans-serif;"><b>{{country}}</b></h2>
+<div style="text-align: center; margin-bottom: 3%;">
+    <button class="button" style="width: 20%;" (click)="showDetails()"><b>Show Details</b></button>
+</div>
+
+<div *ngIf="show">
+    <div style="width:45%; float: right; margin-top: 2%;"> 
+        <div #myMap id="myMap" style="width:100%; height:400px"></div>
+    </div>
+    <br/>
+    <div style="width:50%; font-family: 'Montserrat', sans-serif;">
+        <h3 style="font-family: 'Montserrat', sans-serif;"><b>Languages:</b></h3>
+        <p *ngFor="let language of details.language">{{language.language}}, official : {{language.official}}</p>
+        <h3 style="font-family: 'Montserrat', sans-serif;"><b>Currency:</b></h3>
+        <p>name: {{details.currency.name}}</p>
+        <p>rate: {{details.currency.rate}}</p>
+        <p>symbol: <span [innerHTML]="details.currency.symbol"></span> </p>
+        <h3 style="font-family: 'Montserrat', sans-serif;"><b>Average Weather at {{name}}: {{pathing.toFixed(2)}}</b></h3>
+    </div>
+    <div>
+        <h3 style="font-family: 'Montserrat', sans-serif; margin-top: 15%;"><b>Neighbors:</b></h3>
+        <button class="button" *ngFor="let neighbor of details.neighbors" (click)="showNeiDetails(neighbor.name)"><b>{{neighbor.name}}</b></button>
+    </div>
+</div>

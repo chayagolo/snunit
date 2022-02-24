@@ -1,0 +1,9 @@
+<div>
+    <h3 style="font-family: 'Montserrat', sans-serif; text-align: center;"><b>Index: {{letter}}</b></h3>
+    <table id="countries">
+        <tr *ngFor="let country of filtered">
+            <td style=" width: 40%; font-family: 'Montserrat', sans-serif;">{{country.name}}</td>
+            <td style=" width: 100%;"><button class="button" (click)="setDetails(country.name, country.url)"><b>Click for details</b></button></td>
+        </tr>
+    </table>
+</div>
