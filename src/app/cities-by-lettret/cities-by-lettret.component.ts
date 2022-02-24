@@ -17,7 +17,6 @@ export class CitiesByLettretComponent implements OnInit {
   letter : string = ''
 
   showCountries(letter : string, id : Number){
-    //sessionStorage["letter"] = letter
     this.letter = letter
 
     this.router.navigate(['/countries', id])

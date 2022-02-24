@@ -6,8 +6,5 @@
         <button class="button" *ngFor="let letter of alphabet" (click)="showCountries(letter.val, letter.id)"><b>{{letter.val}}</b></button>
     </div>
     <router-outlet></router-outlet>
-    <!-- <div *ngIf="show">
-        <app-countries [passedLetter]="letter"></app-countries>
-    </div> -->
 </div>
 

@@ -2,7 +2,6 @@ import { AfterContentInit, Component, ElementRef, OnDestroy, OnInit, ViewChild }
 import { ActivatedRoute, Router } from '@angular/router';
 import { UtilsService } from '../utils.service';
 import {} from 'googlemaps';
-//import * as $ from 'jquery';
 declare var $: any;
 
 @Component({
@@ -42,13 +41,6 @@ export class CountryComponent implements OnInit {
   symbol : any
 
   setDetails(){
-    // let s = `<span>${this.details.currency.symbol}</span>`
-    // // this.symbol = $(s); 
-    // var htmlObject = document.createElement('span');
-    // htmlObject.innerHTML = s;
-    // let innerSymbol = document.getElementById("symbol")
-    // innerSymbol?.innerHTML = this.details.currency.symbol
-
     this.pathing = eval(this.pathing)
 
     this.mapProperties = {
