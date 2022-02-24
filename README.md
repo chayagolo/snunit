@@ -7,5 +7,5 @@ ooohh!! and map! i forgot the map...... the tourist can see the country also on 
 
 Thanks for watching:)
 
-To run this project - type in the terminal npm serve --ssl
+To run this project - type in the terminal "ng serve --ssl"
 good luck
